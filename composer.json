@@ -1,7 +1,8 @@
 {
-    "name": "krejcon3/checkboxtree",
+    "name": "myiyk/checkboxtree",
     "description": "easy checkboxtree",
     "authors": [
+        {"name": "Michal Kalita", "email": "kalita.michal@gmail.com"},
         {"name": "Ondřej Krejčíř", "email": "krejcon3@gmail.com"}
     ],
     "keywords":["form", "Nette", "input", "checkbox", "checkboxtree", "tree"],
