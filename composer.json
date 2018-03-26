@@ -13,6 +13,6 @@
         "nette/utils": "^2.3"
     },
     "autoload": {
-        "psr-0": {"krejcon3" : ""}
+        "psr-4": {"krejcon3\\" : "/"}
     }
 }
