@@ -44,17 +44,18 @@ class CheckboxTree extends Nette\Forms\Controls\MultiChoiceControl {
 		return $this->recursiveRender($this->getItems());
 	}
 
-	private function recursiveRender($list) {
-		$html = Html::el("ul");
+	private function recursiveRender($list)
+	{
+		$html = Html::el('ul');
 		foreach ($list as $key => $value) {
 			if (is_array($value)) {
-				$html->add(Html::el("li")->add($this->recursiveRender($value)));
+				$html->addHtml(Html::el('li')->addHtml($this->recursiveRender($value)));
 			} else {
-				$html->add(Html::el("li")
-						->add($this->getControlPart($key))
-						->add(Html::el("label", array("for" => $this->getHtmlId() . '-' . $key))
-								->add($value)
-						)
+				$html->addHtml(Html::el('li')
+					->addHtml($this->getControlPart($key))
+					->addHtml(Html::el('label', array('for' => $this->getHtmlId() . '-' . $key))
+						->addText($value)
+					)
 				);
 			}
 		}
